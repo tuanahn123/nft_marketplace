@@ -20,25 +20,21 @@
 ```
 $ cd nft_marketplace
 $ npm install
-```
-### 3. Boot up local development blockchain
-```
-$ cd nft_marketplace
 $ npx hardhat node
 ```
-
-### 4. Connect development blockchain accounts to Metamask
-- Copy private key of the addresses and import to Metamask
-- Connect your metamask to hardhat blockchain, network 127.0.0.1:8545.
-- If you have not added hardhat to the list of networks on your metamask, open up a browser, click the fox icon, then click the top center dropdown button that lists all the available networks then click add networks. A form should pop up. For the "Network Name" field enter "Hardhat". For the "New RPC URL" field enter "http://127.0.0.1:8545". For the chain ID enter "31337". Then click save.  
-
-
-### 5. Migrate Smart Contracts
-`npx hardhat run src/backend/scripts/deploy.js --network localhost`
-
-### 6. Run Tests
-`$ npx hardhat test`
-
+### 3. Redirect to src/backend
+```
+$ npx hardhat run scripts/deploy.js --network localhost
+```
+### 3. Redirect to src/frontend
+```
+$ npm run start
+```
+### 4. Connect development blockchain accounts to Metamask (extension metamask)
+- Đăng kí, đặng nhập
+- Add a custom network
+- network name: Hardhat local, RPC url: http://127.0.0.1:8545, chain ID: 31337, ETH
+- Copy private key ở chỗ chạy npx hardhat node và import vào Add account or hardware wallet
 ### 7. Launch Frontend
 `$ npm run start`
 
